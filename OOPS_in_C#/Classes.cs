@@ -48,6 +48,8 @@ namespace OOPS_in_C_
             //Accessing Private with getter and setter Methods
             PrivateProj prv = new PrivateProj();
             prv.SetVal(1, "Henry");
+
+       
             prv.GetVal();
         }
     }
