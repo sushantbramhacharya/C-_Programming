@@ -28,6 +28,9 @@ namespace OOPS_in_C_
             double x = 5;
             double y = 4;
 
+            //Nullable
+            int? n= null;
+
             double answer;
             //Manipulating Values outside the method.Using out keyword
             //Passing Reference of the var answer
