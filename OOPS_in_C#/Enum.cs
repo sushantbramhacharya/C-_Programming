@@ -8,6 +8,21 @@ namespace OOPS_in_C_
 {
     internal class Enum
     {
+        //enums allow developers to define a set of named constants, making code more readable, maintainable, and less error-prone. Each constant within an enum represents a unique value.
+        //when you print an enum, it often displays the symbolic name of the enum constant rather than the underlying integer value it represents. 
+        enum CarColor : byte//by default int
+        {
+            Orange = 1,
+            Blue,
+            Green,
+            Red,
+            Yellow
+        }
+        static void SelectColor(CarColor cc)
+        {
+            Console.WriteLine("The Color is " + cc+" The Code is "+(int)cc);
+        }
+
         internal Enum()
         {
             double x = 5;
@@ -30,6 +45,10 @@ namespace OOPS_in_C_
             Console.WriteLine("Get Sum more {0} + {1} + {2} = {3}", a, b, x, GetSumMore(a, b, x));
 
             PrintInfo(zipCode: 15167, name: "Sus");
+
+            //Enum
+            CarColor cc = CarColor.Blue;
+            SelectColor(cc);
         }
         static void GetSum(out double answer,double x = 1, double y = 1)
         {
@@ -57,5 +76,6 @@ namespace OOPS_in_C_
         {
             Console.WriteLine(name + " Lives in zip code " + zipCode);
         }
+
     }
 }
