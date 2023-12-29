@@ -38,6 +38,8 @@ namespace OOPS_in_C_
 
             //Params keyword
             Console.WriteLine("Get Sum more {0} + {1} + {2} = {3}", a, b,x, GetSumMore(a,b,x));
+
+            PrintInfo(zipCode: 15167, name: "Sus");
         }
         static double GetSumMore(params double[] nums) 
         { 
@@ -47,6 +49,11 @@ namespace OOPS_in_C_
                 answer += x;
             }
             return answer;
+        }
+
+        static void PrintInfo(string name,int zipCode)
+        {
+            Console.WriteLine(name + " Lives in zip code " + zipCode);
         }
     }
 }
