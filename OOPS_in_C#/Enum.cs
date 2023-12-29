@@ -35,6 +35,18 @@ namespace OOPS_in_C_
             Console.WriteLine("Before Swap a is {0} b is {1}",a,b);
             SwapInt(ref a,ref b);
             Console.WriteLine("After Swap a is {0} b is {1}", a, b);
+
+            //Params keyword
+            Console.WriteLine("Get Sum more {0} + {1} + {2} = {3}", a, b,x, GetSumMore(a,b,x));
+        }
+        static double GetSumMore(params double[] nums) 
+        { 
+            double answer=0;
+            foreach(double x in nums)
+            {
+                answer += x;
+            }
+            return answer;
         }
     }
 }
