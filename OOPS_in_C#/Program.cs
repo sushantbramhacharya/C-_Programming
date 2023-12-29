@@ -13,7 +13,9 @@ namespace OOPS_in_C_
     {
         static void Main(string[] args)
         {
-            new Classes();
+            //new Classes();
+            //new InheritanceChild();
+            new Enum();
         }
     }
 }
