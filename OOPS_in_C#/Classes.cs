@@ -2,6 +2,72 @@
 
 namespace OOPS_in_C_
 {
+    //Properties and getter setter method overloading using this
+
+    //Example Code Non-Runnable
+    /*
+     class Person
+        {
+          private string name; // field
+          public string Name    // property
+            {
+              get { return name; }
+              set { 
+              if(value.ToLower().Trim()=="liam")
+              {
+      	        name="Boss";
+              }
+            }  
+        }
+
+        class Program
+        {
+          static void Main(string[] args)
+          {
+            Person myObj = new Person();
+            myObj.Name = "Liam";
+            Console.WriteLine(myObj.Name);
+          }
+        }
+
+    Output======> Boss
+     */
+    class PropertiesExample
+    {
+        public string name { get; set; }
+        public readonly int age;//Like final keyword once set cant be changed
+        public string description
+        {
+            get
+            {
+                return description;
+            }
+            set
+            {
+                if (value == null)
+                {
+                    description = string.Empty;
+                }
+                else
+                {
+                    description += value;
+                }
+            }
+        }
+
+        //Overloads using this keyword
+        public PropertiesExample() : this("No Name", 0, "No Description") { }
+        public PropertiesExample(string name) : this(name, 0, "No Description") { }
+
+        //Construtor
+        public PropertiesExample(string name,int age, string description)
+        {
+            this.name = name;
+            this.age = age;
+            this.description = description; 
+        }
+    }
+
     //Private
     class PrivateProj
     {
